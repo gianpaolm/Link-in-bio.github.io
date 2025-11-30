@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juan Pablo Angel | Arquitecto Corporal</title>
+    <meta name="description" content="Atleta Men's Physique y Coach. Reprogramando hábitos y cuerpos." />
+    <meta name="theme-color" content="#000814" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                black: '#000814',    // Fondo profundo
+                navy: '#001D3D',     // Contenedores
+                royal: '#003566',    // Acentos oscuros
+                gold: '#FFC300',     // Acento principal
+                yellow: '#FFD60A',   // Brillos/Hover
+                glass: 'rgba(0, 29, 61, 0.7)', 
+              }
+            },
+            fontFamily: {
+              orbitron: ['"Orbitron"', 'sans-serif'],
+              exo: ['"Exo 2"', 'sans-serif'],
+            },
+            animation: {
+              'spin-slow': 'spin 12s linear infinite',
+              'pulse-fast': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'pan-image': 'pan 30s ease-in-out infinite alternate',
+            },
+            keyframes: {
+              pan: {
+                '0%': { transform: 'scale(1.1) translate(0%, 0%)' },
+                '100%': { transform: 'scale(1.2) translate(-2%, -2%)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #000814;
+        color: white;
+        overflow-x: hidden;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #000814;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #FFC300;
+        border-radius: 4px;
+      }
+      .clip-button {
+        clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+      }
+    </style>
+</head>
+<body class="relative min-h-screen w-full flex items-center justify-center p-4 bg-brand-black text-white selection:bg-brand-gold selection:text-black">
+
+    <!-- 1. BACKGROUND SECTION -->
+    <div class="fixed top-0 left-0 w-full h-full z-0 overflow-hidden pointer-events-none">
+        <!-- Image with slow pan animation -->
+        <div 
+            class="absolute inset-0 w-full h-full bg-cover bg-center animate-pan-image opacity-30"
+            style="background-image: url('https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=1470&auto=format&fit=crop');">
+        </div>
+        
+        <!-- Gradient Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-b from-brand-black via-brand-navy/90 to-brand-black mix-blend-multiply"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-brand-black"></div>
+        
+        <!-- Grid Pattern -->
+        <div class="absolute inset-0 opacity-10" 
+             style="background-image: radial-gradient(#FFC300 1px, transparent 1px); background-size: 30px 30px;">
+        </div>
+    </div>
+
+    <!-- 2. MAIN CONTAINER -->
+    <main class="relative z-10 w-full max-w-lg mt-4 mb-10">
+        <!-- Glass Card -->
+        <div class="backdrop-blur-xl bg-brand-navy/40 border border-brand-royal/30 p-6 md:p-10 relative overflow-hidden shadow-2xl shadow-brand-black/80 rounded-sm">
+            
+            <!-- Corner Accents -->
+            <div class="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-brand-gold/70"></div>
+            <div class="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-brand-gold/70"></div>
+            <div class="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-brand-gold/70"></div>
+            <div class="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-brand-gold/70"></div>
+
+            <!-- Noise Texture -->
+            <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-5 pointer-events-none"></div>
+
+            <!-- PROFILE CONTENT -->
+            <div class="flex flex-col items-center text-center mb-8 z-10 relative">
+                
+                <!-- Avatar -->
+                <div class="relative w-40 h-40 mb-6">
+                    <div class="absolute inset-0 border-2 border-dashed border-brand-gold/40 rounded-full animate-spin-slow"></div>
+                    <div class="absolute inset-2 border border-brand-royal rounded-full animate-spin-slow" style="animation-direction: reverse; animation-duration: 15s;"></div>
+                    
+                    <div class="absolute inset-3 rounded-full overflow-hidden border-2 border-brand-gold shadow-[0_0_20px_rgba(255,195,0,0.2)] bg-black">
+                        <!-- IMAGEN DE PERFIL -->
+                        <img
+                            src="https://instagram.fbog2-4.fna.fbcdn.net/v/t51.2885-19/590428433_18547707937052088_8752260166310000675_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby42NzAuYzIifQ&_nc_ht=instagram.fbog2-4.fna.fbcdn.net&_nc_cat=100&_nc_oc=Q6cZ2QF_1OHMqI2M784HMninAEawv1t9QT13sHwmPelovqlXbIB_dOCwhX4C8ZxoGGzwDTo&_nc_ohc=9_uakNYXiqkQ7kNvwEpg61Y&_nc_gid=5eM6-xxun5u2CL4vO7vUfA&edm=APs17CUBAAAA&ccb=7-5&oh=00_AfhBcvlY8RA9T_Ni17rPV1mqc8H8dY8Si13ty-Y0VS9CCQ&oe=69316A9D&_nc_sid=10d13b"
+                            alt="Juan Pablo Angel"
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                    
+                    <!-- Tech Decorators -->
+                    <div class="absolute -right-1 top-1/2 w-3 h-3 bg-brand-yellow rotate-45 animate-pulse-fast shadow-[0_0_10px_#FFD60A]"></div>
+                    <div class="absolute -left-1 top-1/2 w-3 h-3 bg-brand-royal rotate-45 animate-pulse-fast delay-75"></div>
+                </div>
+
+                <!-- Text Info -->
+                <h1 class="text-3xl md:text-4xl font-orbitron font-bold text-white tracking-widest uppercase mb-2 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                    Juan Pablo Angel
+                </h1>
+                
+                <div class="px-6 py-1 bg-brand-gold/10 border-x border-brand-gold/50 mb-6 transform -skew-x-12">
+                    <h2 class="text-brand-gold font-orbitron text-sm md:text-lg font-bold tracking-[0.3em] transform skew-x-12">
+                        ARQUITECTO CORPORAL
+                    </h2>
+                </div>
+
+                <p class="font-exo text-gray-300 text-sm md:text-base max-w-md leading-relaxed px-4 mb-8">
+                    Más de una década forjando físicos de élite. Atleta Men's Physique. No solo entreno cuerpos, reprogramo hábitos. Tu transformación comienza en la mente.
+                </p>
+
+                <!-- VIDEO SECTION (Reel) -->
+                <div class="w-full max-w-[320px] mb-8 relative group overflow-hidden rounded-xl border border-brand-royal/50 bg-black/80 shadow-2xl">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-gold to-transparent opacity-50 z-20"></div>
+                    
+                    <div class="relative w-full aspect-[9/16]">
+                       <iframe 
+                         class="w-full h-full object-cover rounded-xl"
+                         src="https://www.instagram.com/reel/DRmfEgYjgrF/embed" 
+                         title="Motivation Reel"
+                         frameborder="0" 
+                         allowfullscreen
+                         scrolling="no"
+                       ></iframe>
+                    </div>
+                    
+                    <div class="absolute bottom-0 left-0 w-full py-2 px-4 flex items-center justify-between bg-brand-navy/90 backdrop-blur-md border-t border-brand-royal/30 z-20">
+                        <span class="text-xs font-orbitron text-brand-gold tracking-wider flex items-center gap-2">
+                            <i data-lucide="instagram" class="w-3 h-3 stroke-brand-gold"></i>
+                            MOTIVACIÓN
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BUTTONS SECTION -->
+            <div class="space-y-4">
+                
+                <!-- Button 1: WhatsApp -->
+                <a href="https://wa.me/573168281534" target="_blank" class="clip-button group relative w-full max-w-md mx-auto h-16 flex items-center justify-between px-6 bg-brand-navy/60 backdrop-blur-md border border-brand-royal/50 text-gray-100 font-exo font-bold tracking-wider uppercase transition-all duration-300 ease-out hover:scale-105 hover:-translate-y-1 hover:bg-brand-navy/90 hover:shadow-[0_0_20px_#FFC300] hover:border-[#FFC300] hover:text-[#FFC300]">
+                    <span class="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-brand-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <span class="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-brand-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <span class="flex items-center gap-4 z-10">
+                        <i data-lucide="message-square" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
+                        Consultoría Inmediata
+                    </span>
+                    <span class="relative z-10 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-brand-gold">&gt;&gt;</span>
+                </a>
+
+                <!-- Button 2: Website (Coming Soon) -->
+                <a href="#" onclick="alert('Esta sección estará disponible próximamente.'); return false;" class="clip-button group relative w-full max-w-md mx-auto h-16 flex items-center justify-between px-6 bg-brand-navy/60 backdrop-blur-md border border-brand-royal/50 text-gray-100 font-exo font-bold tracking-wider uppercase transition-all duration-300 ease-out hover:bg-brand-navy/60 opacity-80 hover:shadow-[0_0_20px_#003566] hover:border-[#003566] hover:text-[#003566]">
+                    <span class="flex items-center gap-4 z-10">
+                        <i data-lucide="globe" class="w-5 h-5"></i>
+                        <span>Nuestros Servicios <span class="text-[10px] text-gray-400 normal-case ml-1">(Pronto)</span></span>
+                    </span>
+                </a>
+
+                <!-- Button 3: Instagram -->
+                <a href="https://www.instagram.com/juan_angel97/" target="_blank" class="clip-button group relative w-full max-w-md mx-auto h-16 flex items-center justify-between px-6 bg-brand-navy/60 backdrop-blur-md border border-brand-royal/50 text-gray-100 font-exo font-bold tracking-wider uppercase transition-all duration-300 ease-out hover:scale-105 hover:-translate-y-1 hover:bg-brand-navy/90 hover:shadow-[0_0_20px_#FFD60A] hover:border-[#FFD60A] hover:text-[#FFD60A]">
+                    <span class="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-brand-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <span class="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-brand-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <span class="flex items-center gap-4 z-10">
+                        <i data-lucide="instagram" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
+                        Galería de Resultados
+                    </span>
+                    <span class="relative z-10 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-brand-gold">&gt;&gt;</span>
+                </a>
+
+                <!-- Button 4: TikTok (Coming Soon) -->
+                <a href="#" onclick="alert('Esta sección estará disponible próximamente.'); return false;" class="clip-button group relative w-full max-w-md mx-auto h-16 flex items-center justify-between px-6 bg-brand-navy/60 backdrop-blur-md border border-brand-royal/50 text-gray-100 font-exo font-bold tracking-wider uppercase transition-all duration-300 ease-out hover:bg-brand-navy/60 opacity-80 hover:shadow-[0_0_20px_#FFFFFF] hover:border-[#FFFFFF] hover:text-white">
+                    <span class="flex items-center gap-4 z-10">
+                        <i data-lucide="video" class="w-5 h-5"></i>
+                        <span>Cápsulas de Conocimiento <span class="text-[10px] text-gray-400 normal-case ml-1">(Pronto)</span></span>
+                    </span>
+                </a>
+
+            </div>
+
+            <!-- FOOTER -->
+            <div class="mt-12 text-center text-xs font-exo text-gray-500 uppercase tracking-widest flex flex-col gap-1 items-center">
+                <div class="w-12 h-1 bg-gradient-to-r from-transparent via-brand-royal to-transparent mb-2"></div>
+                <span class="text-brand-gold/60">© 2026 Juan Pablo Angel</span>
+                <span class="opacity-40">Atleta y Coach Men's Physique</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
